@@ -1,0 +1,179 @@
+/* --- FONTS -- */
+
+@font-face {
+    font-family: Lato;
+    src: url(../fonts/Lato-Black.ttf);
+}
+
+@font-face {
+    font-family: Proxima Bold;
+    src: url(../fonts/ProximaNova-Bold.woff);
+}
+
+@font-face {
+    font-family: Proxima Regular;
+    src: url(../fonts/ProximaNova-Regular.woff);
+}
+
+/* --- END FONTS --- */
+
+/* --- Main --- */
+
+html {
+    font-family:sans-serif;
+    -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%
+}
+
+body {
+    margin:0 auto;
+    background: linear-gradient(10deg, #ffffff 50%, #29d4c7 50%);
+    height: 100%;
+}
+
+/* --- End Main --- */
+
+/* --- Header --- */
+
+.navbar {
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.navbar-default {
+    background-color: transparent;
+}
+    
+.navbar-default .navbar-brand {
+    color: #ffffff;
+    font-size: 40px;
+}
+  
+.icon-mill-logo:before {
+    content: "\e900";
+}
+
+/* --- End Header --- */
+
+/* --- Typogrpahy --- */
+
+h1 {
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.tagline h1 {
+    font-family: Lato;
+    line-height: 1em;
+}
+
+/* --- End Typography --- */
+
+/* --- Vimeo Responsive --- */
+
+.js-video {
+    height: 0;
+    padding-top: 25px;
+    padding-bottom: 56.5%;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+ 
+.js-video.widescreen {
+    padding-bottom: 56.34%;
+}
+ 
+.js-video.vimeo {
+    padding-top: 0;
+}
+
+.js-video embed, .js-video iframe, .js-video object, .js-video video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/* --- End Vimeo Responsive --- */
+
+/* --- Footer --- */
+
+footer {
+    background: #373737;
+    padding: 50px 0;
+}
+
+footer * p {
+    color: #ffffff;
+    font-family: Proxima Regular;
+}
+
+footer .copyright p {
+    font-size: 0.75em;
+}
+
+/* Contact Form */
+
+.btn {
+    padding: 10px 16px;
+}
+
+.btn-contact { 
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 0.8em;
+    font-family: Proxima Regular;
+}
+
+.contact-form {
+    text-align: right;
+}
+
+/* End Contact Form */
+
+
+/* --- End Footer --- */
+
+/* --- Media Queiries --- */
+
+@media (min-width: 1200px) {
+    
+    .container {
+        max-width: 960px;
+    }
+    
+}
+    
+@media (min-width: 992px) {
+    
+    .container {
+        max-width: 960px;
+    }
+    
+}
+
+@media (max-width: 992px) {
+    
+}
+       
+@media (min-width: 768px) {
+    
+    .container {
+        max-width: 960px;
+    }
+    
+}
+
+@media (max-width: 479px) {
+    
+    .tagline h1 {
+        font-size: 26px;
+    }
+    
+}
+
+/* --- End Media Queiries --- */
