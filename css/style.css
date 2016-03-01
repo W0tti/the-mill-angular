@@ -101,6 +101,10 @@ h1 {
 
 /* --- Vimeo Thumnails --- */
 
+ul {
+    padding: 0;
+}
+
 .videoThumbnails li {
     display:inline-block;
     margin: 0.97%;
@@ -130,6 +134,19 @@ h1 {
     opacity:1
 }
 
+.icon-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 3em;
+    display: none;
+}
+
+.videoThumbnails .nowPlaying .icon-play, .videoThumbnails figure:hover .icon-play {
+    display: block;
+}
 
 /* --- End Vimeo Thumbnails --- */
 
