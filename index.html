@@ -43,6 +43,13 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
+                    <div class="videoThumbnails" ng-controller="videoPlayerThumbnailController">
+                        <ul>
+                            <li ng-repeat="thumb in videoData" target="player">
+                                <figure><span class="icon-play"></span><img ng-src="{{thumb.thumbnail_url}}"></figure>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="row">
