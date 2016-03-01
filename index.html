@@ -54,6 +54,21 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
+                    <article ng-controller="videoInfoController" ng-show="metadata">
+                        <div class="row">
+                            <div class="col-md-12 video-title">
+                                <h3>{{ metadata.title }}</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div ng-bind-html="safeHtml(metadata.textLeft)" class="video-text"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div ng-bind-html="safeHtml(metadata.textRight)" class="video-text"></div>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </div>
