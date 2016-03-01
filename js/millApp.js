@@ -52,4 +52,14 @@ millApp.controller("videoPlayerThumbnailController", function($rootScope, $scope
     }
     // initalize
     $scope.getData();
+}),
+    
+millApp.controller("videoInfoController", function($scope, $sce) {
+    // wait for the broadcast then set the data
+    $scope.$on("videoInfoChanged", function(event, data) {
+        $scope.metadata = data
+    });
+    $scope.safeHtml = function(html) {
+        return $sce.trustAsHtml(html);
+    }
 });
