@@ -68,6 +68,16 @@ h1 {
     line-height: 1em;
 }
 
+.video-title h3 {
+    font-family: Proxima Bold;
+    font-size: 1.5em;
+}
+
+.video-text {
+    font-family: Proxima Regular;
+    font-size: 1em;
+}
+
 /* --- End Typography --- */
 
 /* --- Vimeo Responsive --- */
