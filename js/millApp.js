@@ -22,4 +22,34 @@ millApp.directive("vimeoPlayer", function($rootScope, $document, $compile) {
             element.empty().append($compile(template)(scope))
         });
     };
+}),
+    
+millApp.controller("videoPlayerThumbnailController", function($rootScope, $scope, $http) {
+    // promise to recieve data
+    $scope.getData = function() {
+        // define Vimeo json
+        var url = "mill-videos.json";
+        var promise = $http.get(url);
+        // when the response is recieved
+        promise.then(function(response) {
+            // set the video data thumbnails to populate from response data
+            $scope.videoData = response.data;
+            // send the broadcast of the first data
+			if (response.data[0]) {
+				$scope.changeVideo(response.data[0]);
+			}
+        });
+        // on error, nothing fancy
+        promise.catch (function(msg) {
+            console.error(msg);
+            alert("There was an error with the vimeo api. Please try again later.");
+        })
+    }
+    // show new video
+        $scope.changeVideo = function(data) {
+        $scope.nowPlaying = data.video_id;
+        $rootScope.$broadcast("videoInfoChanged", data);
+    }
+    // initalize
+    $scope.getData();
 });
