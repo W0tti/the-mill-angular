@@ -260,6 +260,7 @@ footer .copyright p {
     
 }
     
+    
 @media (min-width: 992px) {
     
     .container {
@@ -270,8 +271,13 @@ footer .copyright p {
 
 @media (max-width: 992px) {
     
+    .videoThumbnails li {
+        width: 23.54%;
+    }
+    
 }
-       
+    
+    
 @media (min-width: 768px) {
     
     .container {
@@ -281,6 +287,10 @@ footer .copyright p {
 }
 
 @media (max-width: 479px) {
+
+    .videoThumbnails .nowPlaying .icon-play, .videoThumbnails figure:hover .icon-play {
+        display: none;
+    }
     
     .tagline h1 {
         font-size: 26px;
