@@ -24,22 +24,22 @@
             <div class="row">
                 <div class="col-md-6">
                 </div>
-                <div class="col-md-6 tagline">
-                    <h1 class="text-right">Moving People<br>
-                    Through<br>
-                    Moving Image</h1>
+                <div class="col-md-6 tagline text-right">
+                    <h1>Moving People</h1>
+                    <h1>Through</h1>
+                    <h1>Moving Image</h1>
                 </div>
             </div>
         </div>
     </section>
     <section id="player" class="videoPlayer">
         <div class="container">
-            <div class="row">
+            <div class="row video-player">
                 <div class="col-md-12">
                     <div vimeo-player class="js-video vimeo"></div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row video-thumbs">
                 <div class="col-md-12">
                     <div class="videoThumbnails" ng-controller="videoPlayerThumbnailController">
                         <ul>
@@ -50,7 +50,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row video-info">
                 <div class="col-md-12">
                     <article ng-controller="videoInfoController" ng-show="metadata">
                         <div class="row">
@@ -59,11 +59,8 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6">
-                                <div ng-bind-html="safeHtml(metadata.textLeft)" class="video-text"></div>
-                            </div>
-                            <div class="col-md-6">
-                                <div ng-bind-html="safeHtml(metadata.textRight)" class="video-text"></div>
+                            <div class="col-md-12 video-text">
+                                <div ng-bind-html="safeHtml(metadata.text)"></div>
                             </div>
                         </div>
                     </article>

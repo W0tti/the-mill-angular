@@ -79,6 +79,11 @@ h1 {
 .tagline h1 {
     font-family: Lato;
     line-height: 1em;
+    margin: 0;
+}
+
+.tagline {
+    padding-bottom: 30px;
 }
 
 .video-title h3 {
@@ -89,9 +94,20 @@ h1 {
 .video-text {
     font-family: Proxima Regular;
     font-size: 1em;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
 }
 
 /* --- End Typography --- */
+
+/* --- Rows --- */
+
+.row.video-info {
+    padding-bottom: 50px;
+}
+
+/* --- End Rows --- */
 
 /* --- Vimeo Responsive --- */
 
@@ -284,6 +300,17 @@ footer .copyright p {
         max-width: 960px;
     }
     
+}
+
+@media (max-width: 768px) {
+
+    .video-text {
+        font-family: Proxima Regular;
+        font-size: 1em;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+        columns: 1;
+    }
 }
 
 @media (max-width: 479px) {
