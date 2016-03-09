@@ -9,7 +9,7 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 </head>
-<body ng-app="millApp">
+<body ng-app="millApp" ng-controller="FormController as vm">
     <header>
         <nav class="navbar navbar-default">
             <div class="container">
@@ -75,14 +75,22 @@
                     <p>Copyright © 2016 The Mill (Facility) Ltd Terms & Conditions.</p>
                     </div>
                 <div class="col-md-6 contact-form">
-                    <div class="btn-group" role="group" aria-label="...">
+                    <div role="group" aria-label="...">
                         <button type="button" class="btn btn-default btn-contact">Contact Us</button>
                     </div>
+                    <form novalidate ng-submit="vm.onSubmit()" name="vm.form" ng-show="showForm" ng-controller="FormController">
+                        <formly-form model="vm.form" fields="vm.formFields" form="vm.millForm">
+                            <button type="submit" class="btn btn-submit" ng-disabled="vm.millForm.$invalid" ng-click="reloadPage();">Submit</button>
+                        </formly-form>
+                    </form>
                 </div>
             </div>
         </div>
     </footer>
     <script src="js/angular.min.js"></script>
     <script src="js/millApp.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/api-check/7.2.4/api-check.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-formly/6.11.0/formly.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-formly-templates-bootstrap/4.3.1/angular-formly-templates-bootstrap.js"></script>
 </body>
 </html>

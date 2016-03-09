@@ -1,7 +1,6 @@
 // create the module and name it
 var millApp = angular.module("millApp", []);
 
-
 // create the directive where the iframe will be added
 millApp.directive("vimeoPlayer", function($rootScope, $document, $compile) {
     var vimeoPlayer = {
@@ -61,5 +60,40 @@ millApp.controller("videoInfoController", function($scope, $sce) {
     });
     $scope.safeHtml = function(html) {
         return $sce.trustAsHtml(html);
+    }
+}),
+    
+millApp.controller("FormController",function($scope){
+    var vm = this;
+    // The model object that we reference
+    // on the  element in index.html
+    vm.form = {};
+    // An array of our form fields with configuration
+    // and options set. We make reference to this in
+    // the 'fields' attribute on the  element
+    vm.formFields = [
+        {
+            key: 'name',
+            type: 'input',
+            templateOptions: {
+                type: 'text',
+                label: 'Name',
+                placeholder: 'Enter your name',
+                required: true
+            }
+        },
+        {
+            key: 'email',
+            type: 'input',
+            templateOptions: {
+                type: 'email',
+                label: 'Email address',
+                placeholder: 'Enter email',
+                required: true
+            }
+        },
+    ];        
+    $scope.reloadPage = function() {
+        window.location.reload();
     }
 });
