@@ -257,8 +257,29 @@ footer .copyright p {
     font-family: Proxima Regular;
 }
 
+.btn-submit {
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 0.8em;
+    font-family: Proxima Regular;
+    border: 1px solid #ffffff;
+}
+
+.btn-submit:hover, .btn-submit:focus {
+    background-color: #ebebeb;
+    color: #333333;
+    border-color: #adadad;
+    -webkit-appearance: none; 
+    outline: none;
+}
+
 .contact-form {
     text-align: right;
+}
+
+.contact-form label {
+        display: none;
 }
 
 /* End Contact Form */
