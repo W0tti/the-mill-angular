@@ -76,11 +76,18 @@
                     <div role="group" aria-label="...">
                         <button type="button" class="btn btn-default btn-contact" ng-click="showForm=true" ng-show="!showForm">Contact Us</button>
                     </div>
-                    <form novalidate ng-submit="vm.onSubmit()" name="vm.form" ng-show="showForm" ng-controller="FormController">
-                        <formly-form model="vm.form" fields="vm.formFields" form="vm.millForm">
-                            <button type="submit" class="btn btn-submit" ng-disabled="vm.millForm.$invalid" ng-click="reloadPage();">Submit</button>
-                        </formly-form>
-                    </form>
+                    <form ng-show="showForm">                 
+                        <div id="name-group" class="form-group">
+                            <label>Name</label>
+                            <input type="text" name="name" placeholder="Name">
+                        </div>
+
+                        <div id="email-group" class="form-group">
+                            <label>Email</label>
+                            <input type="text" name="email" placeholder="Email">
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block btn-submit">Submit</button>
+                  </form>
                 </div>
             </div>
         </div>
