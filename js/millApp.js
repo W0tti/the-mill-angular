@@ -1,5 +1,5 @@
 // create the module and name it
-var millApp = angular.module("millApp", ['formly', 'formlyBootstrap']);
+var millApp = angular.module("millApp", []);
 
 // create the directive where the iframe will be added
 millApp.directive("vimeoPlayer", function($rootScope, $document, $compile) {
