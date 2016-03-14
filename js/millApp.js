@@ -64,5 +64,7 @@ millApp.controller("videoInfoController", function($scope, $sce) {
 }),
     
 millApp.controller("formController", function($scope, $http){
+    // create a blank object to hold our form information
+    $scope.formData = {};
     
 });
