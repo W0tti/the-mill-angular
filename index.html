@@ -76,14 +76,17 @@
                     <div role="group" aria-label="...">
                         <button type="button" class="btn btn-default btn-contact" ng-click="showForm=true" ng-show="!showForm">Contact Us</button>
                     </div>
+                    <div id="messages" ng-show="message">{{ message }}</div>
                     <form ng-submit"processForm()" ng-show="showForm">                 
-                        <div id="name-group" class="form-group">
+                        <div id="name-group" class="form-group" ng-class="{ 'has-error' : errorName }">
                             <label>Name</label>
                             <input type="text" name="name" placeholder="Name" ng-model="formData.name">
+                            <span ng-show="errorName">{{ errorName }}</span> 
                         </div>
-                        <div id="email-group" class="form-group">
+                        <div id="email-group" class="form-group" ng-class="{ 'has-error' : errorEmail }">
                             <label>Email</label>
                             <input type="text" name="email" placeholder="Email" ng-model="formData.email">
+                            <span ng-show="errorName">{{ errorEmail }}</span> 
                         </div>
                         <button type="submit" class="btn btn-success btn-block btn-submit">Submit</button>
                   </form>
