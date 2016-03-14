@@ -80,12 +80,12 @@
                     <form ng-submit"processForm()" ng-show="showForm">                 
                         <div id="name-group" class="form-group" ng-class="{ 'has-error' : errorName }">
                             <label>Name</label>
-                            <input type="text" name="name" placeholder="Name" ng-model="formData.name">
+                            <input type="text" name="name" class="form-control" placeholder="Name" ng-model="formData.name">
                             <span ng-show="errorName">{{ errorName }}</span> 
                         </div>
                         <div id="email-group" class="form-group" ng-class="{ 'has-error' : errorEmail }">
                             <label>Email</label>
-                            <input type="text" name="email" placeholder="Email" ng-model="formData.email">
+                            <input type="text" name="email" class="form-control" placeholder="Email" ng-model="formData.email">
                             <span ng-show="errorName">{{ errorEmail }}</span> 
                         </div>
                         <button type="submit" class="btn btn-success btn-block btn-submit">Submit</button>
