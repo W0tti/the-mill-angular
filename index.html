@@ -85,8 +85,8 @@
                         </div>
                         <div id="email-group" class="form-group" ng-class="{ 'has-error' : errorEmail }">
                             <label>Email</label>
-                            <input type="text" name="email" class="form-control" placeholder="Email" ng-model="formData.email">
-                            <span ng-show="errorName">{{ errorEmail }}</span> 
+                            <input type="email" name="email" class="form-control" placeholder="Email" ng-model="formData.email">
+                            <span ng-show="errorEmail">{{ errorEmail }}</span> 
                         </div>
                         <button type="submit" class="btn btn-success btn-block btn-submit">Submit</button>
                   </form>
