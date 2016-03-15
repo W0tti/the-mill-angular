@@ -81,11 +81,13 @@ millApp.controller("formController", function($scope, $http){
               // if not successful, bind errors to error variables
               $scope.errorName = data.errors.name;
               $scope.errorEmail = data.errors.email;
+              $scope.message = false;
             } else {
               // if successful, bind success message to message
               $scope.message = data.message;
               $scope.errorName = false;
               $scope.errorEmail = false;
+              $scope.formData = null;
             }
         });
     };
