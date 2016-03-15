@@ -84,6 +84,8 @@ millApp.controller("formController", function($scope, $http){
             } else {
               // if successful, bind success message to message
               $scope.message = data.message;
+              $scope.errorName = false;
+              $scope.errorEmail = false;
             }
         });
     };
