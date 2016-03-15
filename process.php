@@ -23,7 +23,7 @@ if ( ! empty($errors)) {
 
     // if there are no errors, return a message
     $data['success'] = true;
-    $data['message'] = 'Success!';
+    $data['message'] = 'Form submitted successfuly!';
 }
 
 // return all our data to an AJAX call

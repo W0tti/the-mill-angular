@@ -288,6 +288,7 @@ footer .copyright p {
 .success-message {
     color: #ffffff;
     text-align: left;
+    padding-bottom: 10px;
 }
 
 .error-message {
@@ -331,6 +332,10 @@ footer .copyright p {
     }
     
     footer .copyright p {
+        text-align: center;
+    }
+    
+    .success-message {
         text-align: center;
     }
 }
