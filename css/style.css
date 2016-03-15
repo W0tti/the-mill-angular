@@ -281,8 +281,13 @@ footer .copyright p {
         display: none;
 }
 
+.form-group {
+    text-align: left;
+}
+
 .success-message {
     color: #ffffff;
+    text-align: left;
 }
 
 .error-message {
