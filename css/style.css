@@ -281,6 +281,10 @@ footer .copyright p {
         display: none;
 }
 
+.success-message {
+    color: #ffffff;
+}
+
 /* End Contact Form */
 
 
